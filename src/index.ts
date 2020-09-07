@@ -13,36 +13,35 @@ export default class ApplicationLogger implements AppLogger {
   PARTNER_ID!: number;
 
  public init(initValues: any, partnerUserId : number){
-   console.log("welcome to logger", partnerUserId, initValues);
+//    console.log("welcome to logger", partnerUserId, initValues);
    this.APP = initValues.APPLICATION;
    this.PARTNER_NAME = initValues.PARTNER;
    this.ENV = initValues.ENV;
    this.CONSOLE = initValues.CONSOLE;
    this.URL = initValues.PUBLISH_URL;
    this.PARTNER_ID = partnerUserId;
-   console.log(this.APP);
+//    console.log(this.APP);
 
  }
 
  async emitEventLogs(loglevel: string, data: any){
-     console.log(data, loglevel);
+    //  console.log(data, loglevel);
      return this.publishDatatoServer(loglevel,data);
  }
  
  private publishDatatoServer(loglevel: string, data: any) {
 
-  axios.post(this.URL,{
-        data : data
-      } , {
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
+  const postObject = {data};
+  const header = {
+      "Content-Type": "application/json"
+    };
+
+  axios.post(this.URL, postObject)
     .then((response: any) => {
-      console.log(response);
+    //   console.log(response);
     })
     .catch((error: any) => {
-        console.log(error);
+        // console.log(error);
     })
 
 
