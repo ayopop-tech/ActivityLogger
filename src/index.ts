@@ -5,12 +5,12 @@ interface AppLogger {
 }
 
 export default class ApplicationLogger implements AppLogger {
-  APP: string|undefined;
-  CONSOLE: boolean|undefined;
-  URL: string|undefined;
-  PARTNER_NAME: string|undefined;
-  ENV: string|undefined;
-  PARTNER_ID: number|undefined;
+  APP!: string;
+  CONSOLE: boolean = false;
+  URL!: string;
+  PARTNER_NAME!: string;
+  ENV!: string;
+  PARTNER_ID!: number;
 
  public init(initValues: any, partnerUserId : number){
    console.log("welcome to logger", partnerUserId, initValues);
