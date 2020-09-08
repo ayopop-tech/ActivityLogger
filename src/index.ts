@@ -29,7 +29,7 @@ export default class ApplicationLogger implements AppLogger {
   const header = {
       "Content-Type": "application/json"
     };
-    //what should happen in success and failure cases
+    
   axios.post(this.URL, data)
     .then((response: any) => {
       
