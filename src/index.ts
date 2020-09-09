@@ -45,14 +45,14 @@ export default class ApplicationLogger implements AppLogger {
   }
 }
 
-let  loggerObject = {
- "ENV" : "develop",
- "APPLICATION" : "partner-dashboard",
- "PARTNER_NAME" : "AYOPOP",
- "CONSOLE" : "false",
-//  "PUBLISH_URL" : "https://dev0pg.openapi.ayopop.id/v1/partnermanager/api/product/updateproductdetails",
-}
+// let  loggerObject = {
+//  "ENV" : "develop",
+//  "APPLICATION" : "partner-dashboard",
+//  "PARTNER_NAME" : "AYOPOP",
+//  "CONSOLE" : "false",
+// //  "PUBLISH_URL" : "https://dev0pg.openapi.ayopop.id/v1/partnermanager/api/product/updateproductdetails",
+// }
 
-let initLogPri = new ApplicationLogger();
-initLogPri.init(loggerObject,10);
-initLogPri.emitEventLogs("critical", {"key" : "abc"});
+// let initLogPri = new ApplicationLogger();
+// initLogPri.init(loggerObject,10);
+// initLogPri.emitEventLogs("critical", {"key" : "abc"});
