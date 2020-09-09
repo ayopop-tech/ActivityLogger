@@ -32,10 +32,10 @@ export default class ApplicationLogger implements AppLogger {
     
   axios.post(this.URL, data)
     .then((response: any) => {
-      
+      // console.log(response);
     })
     .catch((error: any) => {
-      
+      // console.log(error);
     })
 
 
