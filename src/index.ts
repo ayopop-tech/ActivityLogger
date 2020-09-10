@@ -18,12 +18,12 @@ export default class ApplicationLogger implements AppLogger {
     this.ENV = initValues.ENV;
     this.CONSOLE = initValues.CONSOLE;
     if (!initValues.PUBLISH_URL) {
-      try {
-        throw new Error('PUBLISH_URL is mandatory parameter');
-        // console.log("You'll never reach to me", 123465)
-      } catch (e) {
-        // console.log(e.name, e.message); // Error I'm Evil
-      }
+      // try {
+      throw Error('PUBLISH_URL is mandatory parameter');
+      // console.log("You'll never reach to me", 123465)
+      // } catch (e) {
+      //   // console.log(e.name, e.message); // Error I'm Evil
+      // }
     }
 
     this.URL = initValues.PUBLISH_URL;
