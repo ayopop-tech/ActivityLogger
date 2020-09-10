@@ -17,17 +17,12 @@ export default class ApplicationLogger implements AppLogger {
     this.PARTNER_NAME = initValues.PARTNER;
     this.ENV = initValues.ENV;
     this.CONSOLE = initValues.CONSOLE;
-    if (!initValues.PUBLISH_URL) {
-      // try {
-      throw new Error('PUBLISH_URL is mandatory parameter');
-      // console.log("You'll never reach to me", 123465)
-      // } catch (e) {
-      //   // console.log(e.name, e.message); // Error I'm Evil
-      // }
-    } else {
-      this.URL = initValues.PUBLISH_URL;
-    }
     this.PARTNER_ID = partnerUserId;
+    if (initValues.hasOwnProperty('PUBLISH_URL')) {
+      this.URL = initValues.PUBLISH_URL;
+    } else {
+      throw new Error('mandatory parameter');
+    }
   }
 
   async emitEventLogs(loglevel: string, data: any) {
@@ -55,7 +50,7 @@ export default class ApplicationLogger implements AppLogger {
 //   APPLICATION: 'partner-dashboard',
 //   PARTNER_NAME: 'AYOPOP',
 //   CONSOLE: 'false',
-//   //  "PUBLISH_URL" : "https://dev0pg.openapi.ayopop.id/v1/partnermanager/api/product/updateproductdetails",
+//   PUBLISH_URL : "https://dev0pg.openapi.ayopop.id/v1/partnermanager/api/product/updateproductdetails",
 // };
 
 // const initLogPri = new ApplicationLogger();
