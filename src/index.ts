@@ -21,7 +21,7 @@ export default class ApplicationLogger implements AppLogger {
     if (initValues.hasOwnProperty('PUBLISH_URL')) {
       this.URL = initValues.PUBLISH_URL;
     } else {
-      throw new Error('mandatory parameter');
+      throw new Error('Mandatory parameter PUBLISH_URL');
     }
   }
 
