@@ -1,6 +1,6 @@
 {
   "name": "activity-application-logger",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "http based user activity logger",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
