@@ -18,7 +18,7 @@ describe('functionUnderTest', () => {
     };
 
     try {
-      l.init(initObject, 2);
+      l.init(initObject);
     } catch (error) {
       expect(error).toHaveProperty('message', 'Mandatory parameter PUBLISH_URL');
     }

@@ -7,8 +7,7 @@ export default class ApplicationLogger implements AppLogger {
     URL: string;
     PARTNER_NAME: string;
     ENV: string;
-    PARTNER_ID: number;
-    init(initValues: any, partnerUserId: number): void;
+    init(initValues: any): void;
     emitEventLogs(loglevel: string, data: any): Promise<void>;
     private publishDatatoServer;
 }
