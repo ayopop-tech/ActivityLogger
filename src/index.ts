@@ -10,14 +10,12 @@ export default class ApplicationLogger implements AppLogger {
   URL!: string;
   PARTNER_NAME!: string;
   ENV!: string;
-  PARTNER_ID!: number;
 
-  public init(initValues: any, partnerUserId: number) {
+  public init(initValues: any) {
     this.APP = initValues.APPLICATION;
     this.PARTNER_NAME = initValues.PARTNER;
     this.ENV = initValues.ENV;
     this.CONSOLE = initValues.CONSOLE;
-    this.PARTNER_ID = partnerUserId;
     if (initValues.hasOwnProperty('PUBLISH_URL')) {
       this.URL = initValues.PUBLISH_URL;
     } else {
